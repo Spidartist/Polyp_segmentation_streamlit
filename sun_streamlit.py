@@ -11,9 +11,9 @@ from numpy import unravel_index
 
 st.set_page_config(
      page_title="Polyps Segmentation Apps",
-     page_icon=":shark:",
-     layout="wide",
-     initial_sidebar_state="expanded",
+     page_icon=":shark:"
+     # layout="wide",
+     # initial_sidebar_state="expanded",
  )
 
 
@@ -70,7 +70,7 @@ if uploaded_file is not None:
         white_line,
         mask_parse(y_pred)
     ]
-    
+
     st.subheader("Result")
     image = np.concatenate(all_images, axis=1)
     st.image(image, clamp=True, channels="BGR")
