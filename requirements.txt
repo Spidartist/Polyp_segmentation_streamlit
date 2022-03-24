@@ -1,0 +1,7 @@
+Pillow==9.0.0
+streamlit==1.7.0
+pandas==1.4.1
+numpy==1.22.1
+opencv-python==4.5.5.64
+tensorflow==2.8.0
+keras==2.8.0
