@@ -10,8 +10,13 @@ from numpy import unravel_index
 
 
 st.set_page_config(
-     page_title="Polyps Segmentation Apps",
-     page_icon=":shark:"
+    page_title="Polyps Segmentation Apps",
+    page_icon=":spider:",
+    menu_items={
+        'Get Help': 'https://www.facebook.com/spidartist',
+        'Report a bug': "https://github.com/Spidartist/",
+        'About': "### This is my first app about *polyps segmentation* :spider:!\n  #### Just input the image and get the result :shark:\n Author:  Quan Hoang Danh :heart:"
+    }
      # layout="wide",
      # initial_sidebar_state="expanded",
  )
