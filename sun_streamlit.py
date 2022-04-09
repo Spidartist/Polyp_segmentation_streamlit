@@ -50,7 +50,7 @@ if uploaded_file is not None:
     
     # Normalize the image
     opencv_image = opencv_image / 255.0
-
+    
     print(opencv_image.shape)
 
     st.image(opencv_image, channels="BGR")
@@ -74,6 +74,7 @@ if uploaded_file is not None:
     st.image(image, clamp=True, channels="BGR")
     success, encoded_image = cv2.imencode('.png', image)
     content = encoded_image.tobytes()
+    content = content * 255.0
     btn = st.download_button(
              label="Download mask",
              data=content,
