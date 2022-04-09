@@ -71,10 +71,10 @@ if uploaded_file is not None:
 
     st.subheader("Result")
     image = np.concatenate(all_images, axis=1)
+    show_image = np.concatenate(all_images*255.0, axis=1)
     st.image(image, clamp=True, channels="BGR")
-    success, encoded_image = cv2.imencode('.png', image)
+    success, encoded_image = cv2.imencode('.png', show_image)
     content = encoded_image.tobytes()
-    content = content * 255.0
     btn = st.download_button(
              label="Download mask",
              data=content,
