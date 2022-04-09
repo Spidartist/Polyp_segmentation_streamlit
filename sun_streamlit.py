@@ -73,6 +73,7 @@ if uploaded_file is not None:
     image = np.concatenate(all_images, axis=1)
 #     show_image = np.concatenate(all_images*255.0, axis=1)
     st.image(image, clamp=True, channels="BGR")
+    image/=255.0
     success, encoded_image = cv2.imencode('.png', image)
     content = encoded_image.tobytes()
     btn = st.download_button(
