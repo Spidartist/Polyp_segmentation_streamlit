@@ -20,6 +20,7 @@ st.set_page_config(
 
 
 @st.cache
+# Necessary function
 def iou(y_true, y_pred):
     def f(y_true, y_pred):
         intersection = (y_true * y_pred).sum()
@@ -71,8 +72,9 @@ if uploaded_file is not None:
 
     st.subheader("Result")
     image = np.concatenate(all_images, axis=1)
-#     show_image = np.concatenate(all_images*255.0, axis=1)
     st.image(image, clamp=True, channels="BGR")
+    
+    # Download button
     image*=255.0
     success, encoded_image = cv2.imencode('.png', image)
     content = encoded_image.tobytes()
