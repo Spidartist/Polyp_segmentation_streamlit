@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import cv2
 import keras
-# from keras.utils.generic_utils import CustomObjectScope
+from keras.utils.generic_utils import CustomObjectScope
 import tensorflow as tf
 
 # App's title
@@ -54,8 +54,8 @@ if uploaded_file is not None:
     print(opencv_image.shape)
 
     st.image(opencv_image, channels="BGR")
-#     with CustomObjectScope({'iou': iou}):
-    model = keras.models.load_model("model.h5")
+    with CustomObjectScope({'iou': iou}):
+        model = keras.models.load_model("model.h5")
 
 
     y_pred = model.predict(np.expand_dims(opencv_image, axis=0))[0] > 0.5
