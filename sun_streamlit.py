@@ -56,7 +56,7 @@ if uploaded_file is not None:
 
     st.image(opencv_image, channels="BGR")
     with CustomObjectScope({'iou': iou}):
-        model = keras.models.load_model("model.h5")
+        model = keras.models.load_model("model_2.h5")
 
 
     y_pred = model.predict(np.expand_dims(opencv_image, axis=0))[0] > 0.5
