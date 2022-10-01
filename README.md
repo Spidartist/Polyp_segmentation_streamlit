@@ -12,6 +12,7 @@ Link to app: <a href="https://spidartist-poplyp-segmentation-streamlit-sun-strea
 - Technical: Using U-net's neural network architect, build model with Keras, process input image using Numpy, OpenCV and at last deploy with Streamlit.
 <br>
 Demo:
+<img style="float:right;" src="https://user-images.githubusercontent.com/72654978/193414630-46f0097c-5fc5-4812-a7d7-d65cd8f26b29.png" alt="..." width="250" />
 
 
 Just enjoy it, if you have any question or issue, feel free for DM me in Facebook!
